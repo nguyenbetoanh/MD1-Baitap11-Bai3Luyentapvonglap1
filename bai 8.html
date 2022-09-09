@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<h1 id="ht"></h1>
+<button onclick="bam()" >choi</button>
+<script>
+  let count=0;
+  function bam() {
+
+    let nhapGiaTri = +prompt('nhap so ')
+    let i=Math.floor(Math.random() * 10)
+    document.getElementById('ht').innerHTML =i
+    if (nhapGiaTri==i){
+      document.getElementById('ht').innerHTML= `chinh xac ${i}--------may chon la  ${i}-----ban chon la${nhapGiaTri}`
+    }else
+      count++;
+    document.getElementById('ht').innerHTML=`ko chinh xac ban da choi ${count} lan ---------may chon la  ${i} -----ban chon la${nhapGiaTri}`
+
+    if(count==4){
+      alert("ban da het luot choi")
+
+    }
+  }
+</script>
+
+</body>
+</html>
